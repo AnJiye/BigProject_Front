@@ -76,9 +76,28 @@
   }
 }
 
+@font-face {
+  font-family: 'AppleSDGothicNeoM';
+  src: url(../fonts/AppleSDGothicNeoM.ttf) format('truetype');
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: 'SFUIDisplay-Light';
+  src: url('../fonts/SFUIDisplay-Light.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'SFUIDisplay-Heavy';
+  src: url('../fonts/SFUIDisplay-Heavy.otf') format('opentype');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
 body {
+  font-family: 'AppleSDGothicNeoM', 'SFUIDisplay-Light';
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  /* font-family: var(--bs-body-font-family); */
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -11341,6 +11360,10 @@ body {
   margin-left: -225px;
 }
 
+#layoutSidenav_content h1 {
+  font-family: 'SFUIDisplay-Heavy';
+}
+
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
   transform: translateX(0);
 }
@@ -11698,4 +11721,60 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+/*
+---------------------------------------------
+mypage
+---------------------------------------------
+*/
+.profile_container {
+  width: 700px;
+  height: 240px;
+  margin: 0px auto;
+  /* text-align: center; */
+  background-color: #F4F4F4;
+  border-radius: 30px;
+  /* -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 15px;
+}
+
+/* 프로필 사진, 닉네임 */
+.profile_container .profile {
+  float: left;
+  /* width: 35%; */
+  margin-left: 26px;
+}
+
+.profile_container .profile h3 {
+  width: auto;
+}
+
+.profile_container img {
+  margin-left: 7px;
+}
+
+.profile_container h5 {
+  margin-left: 26px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.main-button-black a {
+  float: right;
+  font-size: 15px;
+  color: #fff;
+  background-color: #4E4E4E;
+  padding: 12px 25px;
+  border-radius: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .3s;
+  text-decoration: none;
+}
+
+.main-button-black a:hover {
+  opacity: 0.9;
 }
